@@ -1,7 +1,7 @@
 {
   "name": "proxenv",
   "version": "0.1.0",
-  "description": "",
+  "description": "Unobtrusive proxied config management",
   "main": "index.js",
   "dependencies": {
     "harmony-reflect": "^1.4.4",
