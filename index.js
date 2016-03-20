@@ -24,7 +24,7 @@ function proxify(obj) {
     get() {
       const val = Reflect.get(...arguments)
 
-      if (typeof val === "undefined") {
+      if (val == null) {
         return proxify({})
       }
 

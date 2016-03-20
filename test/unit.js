@@ -28,13 +28,16 @@ describe("proxenv", function() {
   it("should handle empty object literals the same way", function() {
     const config = proxenv(configPath)
 
+    expect(config.empty).to.be.empty
     expect(config.empty.but.not.breaking).to.exist
   })
 
   it("should handle null the same way", function() {
     const config = proxenv(configPath)
 
-    expect(config.empty.but.not.breaking).to.exist
+    expect(config.null).not.to.equal(null)
+    expect(config.null).to.be.empty
+    expect(config.null.but.not.breaking).to.exist
   })
 
   it("should handle overriding env with parameter", function() {
